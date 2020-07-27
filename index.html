@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>To do list</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="main.js" async></script>
+  <script src="weather.js" async></script>
+  <link href="main.css" rel="stylesheet">
+</head>
+
+<body>
+<p>Translate this page:</p>
+
+<div id="google_translate_element"></div>
+  <header>
+	<nav class="navbar navbar-light bg-light">
+	 <span class="navbar-text">
+		Comp 1073 - Sticky notes
+	 </span>
+	</nav>
+  </header>
+  <div class="container my-5">
+	 <div class="row">
+		<div class="col-sm-6">
+			<div class="card" style="width: 18rem;">
+			  <div class="card-body">
+				<h1 class="card-title display-4 notes">Notes</h1>
+				<p class="card-text">
+				  <div class="form-group">
+					<textarea class="form-control" id="save" rows="3"></textarea>
+				  </div>
+				</p>
+				<button onclick="saveReminder()" class="btn btn-warning">Pin</button>
+			  </div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+		<div class="card" style="width: 18rem;">
+			<div id="weather">
+				<div id="description"></div>
+					<h1 id="temp"></h1>
+					<div id="location"></div>
+					  <div id="ch_widget"></div>
+				</div>
+			</div>
+			<div class="card" style="width: 18rem;">
+			  <div class="card-body">
+				<h5 class="card-title display-4 notes">Task</h5>
+				  <div class="list-group list-group-flush" id="reminders">
+					<div id="check"></div>
+					<div id="deleteContent"></div>
+				  </div>
+			  </div>
+			</div>
+		</div>	
+	</div>
+  </div>
+ <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="translate.js"></script> 
+  <footer>
+    <p> COMP1054 - To Do List - &copy 2020 </p>
+  </footer>
+</body>
+</html>
